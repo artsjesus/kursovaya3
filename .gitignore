@@ -1,0 +1,5 @@
+venv/
+.idea/
+src/*.pyc
+src/__pychache__/
+.venv
