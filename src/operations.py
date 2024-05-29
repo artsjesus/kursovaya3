@@ -11,25 +11,19 @@ class Transaction():
         self.from_ = None
 
     def name_to(self):
-        """На что переводим"""
+        """Куда переводим"""
         return re.sub("[^a-zA-ZА-Яа-я\s]", "", self.to)
 
     def number_to(self):
         """Номер счета на который переводим"""
         return re.sub("[\D]", "", self.to)
 
-    def account_number(self):
-        """Скрытие номера счета"""
-        return "**" + self.number_to()[-4:]
 
-    def card_name(self):
+    def card_name_from(self):
         """Название карты"""
         return re.sub("[^a-zA-ZА-Яа-я\s]", "", self.from_)
 
-    def card_number(self):
+    def card_number_from(self):
         """Номер карты счета с которого переводим"""
         return re.sub("[\D]", "", self.from_)
 
-    def from_account_number(self):
-        """Скрытие счета"""
-        return "**" + self.card_number()[-4:]
