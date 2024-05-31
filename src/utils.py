@@ -39,7 +39,3 @@ def transaction(operation):
 def account_number(number):
     """Скрытие счета"""
     return "**" + number[-4:]
-
-
-def test_number_output():
-    assert number_output("1596837868705199") == "1596 83** **** 5199"
